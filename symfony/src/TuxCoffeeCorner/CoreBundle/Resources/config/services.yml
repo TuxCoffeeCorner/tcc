@@ -1,0 +1,15 @@
+parameters:
+#    tux_coffee_corner_core.example.class: TuxCoffeeCorner\CoreBundle\Example
+
+services:
+    ldap_interface:
+        class:          TuxCoffeeCorner\CoreBundle\LdapInterface
+        arguments:      [ @doctrine.orm.entity_manager, @log_interface ]
+
+    log_interface:
+        class:          TuxCoffeeCorner\CoreBundle\LogInterface
+        arguments:      [ @doctrine.orm.entity_manager ]
+
+    mail_interface:
+        class:          TuxCoffeeCorner\CoreBundle\MailInterface
+        arguments:      [ @doctrine.orm.entity_manager, @log_interface ]

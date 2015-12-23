@@ -1,0 +1,21 @@
+TuxCoffeeCorner\CoreBundle\Entity\Vault:
+    type: entity
+    table: Vault
+    fields:
+        id_vault:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        timestamp:
+            type: datetime
+        input:
+            type: float
+        outtake:
+            type: float
+        comment:
+            type: text
+            nullable: true
+        cashier:
+            type: text
+    lifecycleCallbacks: {  }

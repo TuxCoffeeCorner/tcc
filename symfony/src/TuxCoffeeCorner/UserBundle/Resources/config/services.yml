@@ -1,0 +1,7 @@
+parameters:
+#    tux_coffee_corner_user.example.class: TuxCoffeeCorner\UserBundle\Example
+
+services:
+#    tux_coffee_corner_user.example:
+#        class: %tux_coffee_corner_user.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

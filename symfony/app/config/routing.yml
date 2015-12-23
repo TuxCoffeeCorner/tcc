@@ -1,0 +1,7 @@
+tcc_core:
+    resource: "@TuxCoffeeCornerCoreBundle/Resources/config/routing.yml"
+    prefix:   /
+
+tux_coffee_corner_user:
+    resource: "@TuxCoffeeCornerUserBundle/Resources/config/routing.yml"
+    prefix:   /user

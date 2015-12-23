@@ -1,0 +1,25 @@
+TuxCoffeeCorner\CoreBundle\Entity\Customer:
+    type: entity
+    table: Customer
+    fields:
+        id_customer:
+            type: integer
+            id: true
+        name:
+            type: text
+        email:
+            type: text
+        credit:
+            type: float
+        active:
+            type: boolean
+        updated:
+            type: datetime
+    manyToOne:
+        favorite:
+            nullable: true
+            targetEntity: Product
+            joinColumn:
+                name: favorite
+                referencedColumnName: id_product        
+    lifecycleCallbacks: {  }

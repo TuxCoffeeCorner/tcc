@@ -1,0 +1,19 @@
+# prefix: /admin/config
+
+config:
+    pattern: /
+    defaults: { _controller: TuxCoffeeCornerCoreBundle:Config:index }
+
+config_get:
+    pattern: /get/
+    defaults: { _controller: TuxCoffeeCornerCoreBundle:Config:get }
+
+config_get_byid:
+    pattern: /get/{var_name}
+    defaults: { _controller: TuxCoffeeCornerCoreBundle:Config:getByID }
+
+config_set_var:
+    pattern: /set/{var_name}
+    defaults: { _controller: TuxCoffeeCornerCoreBundle:Config:setVar }
+    requirements:
+        _method:  POST

@@ -1,0 +1,21 @@
+# prefix: /admin/customers
+
+customers:
+    pattern: /
+    defaults: { _controller: TuxCoffeeCornerCoreBundle:Customers:index }
+
+customers_get:
+    pattern: /get/{active}/{column}/{type}
+    defaults: { _controller: TuxCoffeeCornerCoreBundle:Customers:getCustomers }
+    
+customers_changestate:
+    pattern: /changestate/{cid}
+    defaults: { _controller: TuxCoffeeCornerCoreBundle:Customers:changeCustomerState }
+    requirements:
+        _method:  POST
+    
+customers_charge:
+    pattern: /charge/{cid}/{charge}
+    defaults: { _controller: TuxCoffeeCornerCoreBundle:Customers:chargeCustomer }
+    requirements:
+        _method:  POST

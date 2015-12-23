@@ -1,0 +1,17 @@
+TuxCoffeeCorner\CoreBundle\Entity\Config:
+    type: entity
+    table: Config
+    fields:
+        name:
+            type: text
+            id: true
+        value:
+            type: text
+            nullable: true
+        description:
+            type: text
+            nullable: true
+        datatype:
+            type: text
+            nullable: true
+    lifecycleCallbacks: {  }

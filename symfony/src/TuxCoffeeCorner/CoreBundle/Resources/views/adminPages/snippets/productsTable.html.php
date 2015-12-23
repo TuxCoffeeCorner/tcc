@@ -1,0 +1,3 @@
+<?php foreach ($products as $product): ?>
+<tr id="<?php echo $product->getId(); ?>"><td><?php echo $product->getId(); ?></td><td><?php echo $product->getBarcode(); ?></td><td><?php echo $product->getName(); ?></td><td><?php echo $product->getPrice(); ?></td><td><?php echo $product->getImage(); ?></td><td><button class="btn btn-default btn-xs btn-product-edit" type="button" title="edit" data-target="#product-modal" data-toggle="modal"><span class="glyphicon glyphicon-pencil"></span></button> <button class="btn btn-default btn-xs btn-product-del" type="button" title="delete"><span class="glyphicon glyphicon-trash"</span></button></td></tr>
+<?php endforeach; ?>

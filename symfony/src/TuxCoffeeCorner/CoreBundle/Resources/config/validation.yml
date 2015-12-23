@@ -1,0 +1,56 @@
+TuxCoffeeCorner\CoreBundle\Entity\Vault:
+    getters:
+        inputOuttake:
+            - "False":
+                message: "Input and outtake can not both be empty"
+    properties:
+        timestamp:
+            - DateTime:
+                message: "Timestamp must be a date format"
+        input:
+            - Type:
+                type: numeric
+                message: "Input must be in CHF: '{{ value }}'"
+        outtake:
+            - Type:
+                type: numeric
+                message: "Outtake must be in CHF: '{{ value }}'"
+
+TuxCoffeeCorner\CoreBundle\Entity\Config:
+    getters:
+        type:
+            - "False":
+                message: "String does not match datatype"
+
+TuxCoffeeCorner\CoreBundle\Entity\Mail:
+    constraints:
+        - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity:
+            fields: [identifier]
+            message: "The identifier is already being used"
+    properties:
+        header_to:
+            - Email:
+                message: "The entered email for fieled 'To' ({{ value }}) is not a valid email"
+                checkMX: true
+        header_from:
+            - Email:
+                message: "The entered email for field 'From': ({{ value }}) is not a valid email"
+                checkMX: true
+        header_cc:
+            - Email:
+                message: "The entered email for field 'CC': ({{ value }}) is not a valid email"
+                checkMX: true
+
+TuxCoffeeCorner\CoreBundle\Entity\Product:
+    properties:
+        price:
+            - Type:
+                type: numeric
+                message: "Price musst be in CHF: '{{ value }}'"
+        barcode:
+            - NotBlank:
+                message: "Barcode must not be blank"
+            - Regex:
+                pattern: "/^[0-9]{1,18}$/"
+                match:   true
+                message: "Barcode '{{ value }}' must be an integer with 1 to 18 digit"

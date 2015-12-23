@@ -1,0 +1,23 @@
+TuxCoffeeCorner\CoreBundle\Entity\Mail:
+    type: entity
+    table: Mail
+    fields:
+        id_mail:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        identifier:
+            type: text
+        subject:
+            type: text
+        body:
+            type: text
+        header_to:
+            type: text
+        header_cc:
+            type: text
+        header_from:
+            type: text
+
+    lifecycleCallbacks: {  }

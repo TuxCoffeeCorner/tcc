@@ -1,0 +1,19 @@
+TuxCoffeeCorner\CoreBundle\Entity\Cookie:
+    type: entity
+    table: Cookie
+    fields:
+        id_cookie:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        personalnummer:
+            type: text
+            unique: true
+        username:
+            type: text
+            unique: true
+        sessionid:
+            type: text
+            unique: true
+    lifecycleCallbacks: {  }

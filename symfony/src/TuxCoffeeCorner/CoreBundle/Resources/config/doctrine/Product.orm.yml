@@ -1,0 +1,20 @@
+TuxCoffeeCorner\CoreBundle\Entity\Product:
+    type: entity
+    table: Product
+    fields:
+        id_product:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        name:
+            type: text
+        price:
+            type: float
+        barcode:
+            type: bigint
+            unique: true
+        image:
+            type: text
+            nullable: true
+    lifecycleCallbacks: {  }

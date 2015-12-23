@@ -1,0 +1,31 @@
+# prefix: /admin/vault
+
+vault:
+  pattern: /
+  defaults: { _controller: TuxCoffeeCornerCoreBundle:Vault:index }
+  
+vault_get:
+  pattern: /get/
+  defaults: { _controller: TuxCoffeeCornerCoreBundle:Vault:getVault }
+
+vault_getbyid:
+  pattern: /get/{vid}
+  defaults: { _controller: TuxCoffeeCornerCoreBundle:Vault:getByID }
+
+vault_add:
+  pattern: /add/
+  defaults: { _controller: TuxCoffeeCornerCoreBundle:Vault:add }
+  requirements:
+    _method:  POST
+
+vault_edit:
+  pattern: /edit/{vid}
+  defaults: { _controller: TuxCoffeeCornerCoreBundle:Vault:edit }
+  requirements:
+    _method:  POST
+
+vault_delete:
+  pattern: /delete/{vid}
+  defaults: { _controller: TuxCoffeeCornerCoreBundle:Vault:delete }
+  requirements:
+    _method:  POST

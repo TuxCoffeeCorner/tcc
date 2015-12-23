@@ -1,0 +1,27 @@
+TuxCoffeeCorner\CoreBundle\Entity\TccTrx:
+    type: entity
+    table: TccTrx
+    fields:
+        id_tcctrx:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        timestamp:
+            type: datetime
+        amount:
+            type: float
+        status:
+            type: integer
+    manyToOne:
+        customer:
+            targetEntity: Customer
+            joinColumn:
+                name: customer_id
+                referencedColumnName: id_customer
+        product:
+            targetEntity: Product
+            joinColumn:
+                name: product_id
+                referencedColumnName: id_product
+    lifecycleCallbacks: {  }

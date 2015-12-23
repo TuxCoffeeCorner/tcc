@@ -1,0 +1,3 @@
+symfony/app/sqlite.db
+symfony/app/cache/*
+symfony/app/logs/*

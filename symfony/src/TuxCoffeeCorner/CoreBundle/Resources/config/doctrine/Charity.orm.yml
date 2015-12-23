@@ -1,0 +1,25 @@
+TuxCoffeeCorner\CoreBundle\Entity\Charity:
+    type: entity
+    table: Charity
+    fields:
+        id_charity:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        barcode:
+            type: bigint
+            unique: true
+        organisation:
+            type: text
+        beginn:
+            type: text
+        ende:
+            type: text
+        spendenstand:
+            type: integer
+            nullable: true
+        image:
+            type: text
+            nullable: true
+    lifecycleCallbacks: {  }

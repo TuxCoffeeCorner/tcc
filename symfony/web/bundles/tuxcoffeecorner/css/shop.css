@@ -1,0 +1,19 @@
+
+body {
+	padding-top: 30px;
+    background-image: url('../img/pattern.png');
+}
+
+.shop-input {
+	width: 0px;
+	overflow: hidden;
+}
+
+.annulated {
+	text-decoration: line-through;
+}
+
+.jumbotron {
+	background-color: #428BCA;
+	color: #FFF6E5; 
+}

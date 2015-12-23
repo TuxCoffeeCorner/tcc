@@ -1,0 +1,4 @@
+<tr><th></th><th>Summary of Vault</th><th><?php echo $totalIn;?></th><th><?php echo $totalOut;?></th><th>Saldo: <?php echo $saldo;?></th><th></th><th></th></tr>
+<?php foreach ($entries as $entry): ?>
+<tr id="<?php echo $entry->getId(); ?>"><td><?php echo $entry->getId(); ?></td><td><?php echo $entry->getTimestamp(); ?></td><td><?php echo ($entry->getInput() == '0.00')? '' : $entry->getInput(); ?></td><td><?php echo ($entry->getOuttake() == '0.00')? '' : $entry->getOuttake(); ?></td><td><?php echo $entry->getComment(); ?></td><td><?php echo $entry->getCashier(); ?></td><td><button class="btn btn-default btn-xs btn-vault-edit" type="button" title="edit" data-target="#vault-modal" data-toggle="modal"><span class="glyphicon glyphicon-pencil"></span></button> <button class="btn btn-default btn-xs btn-vault-del" type="button" title="delete"><span class="glyphicon glyphicon-remove"></span></button></td></tr>
+<?php endforeach; ?>

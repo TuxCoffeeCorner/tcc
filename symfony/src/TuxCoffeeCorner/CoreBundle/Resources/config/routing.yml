@@ -1,0 +1,36 @@
+shop:
+    pattern:  /shop/
+    defaults: { _controller: TuxCoffeeCornerCoreBundle:Shop:index }
+
+shop_shop:
+    resource: "@TuxCoffeeCornerCoreBundle/Resources/config/shopRouting/shop.yml"
+    prefix:   /shop
+
+
+admin:
+    pattern: /admin/
+    defaults: { _controller: TuxCoffeeCornerCoreBundle:Customers:index }
+
+admin_config:
+    resource: "@TuxCoffeeCornerCoreBundle/Resources/config/adminRouting/config.yml"
+    prefix:   /admin/config
+
+admin_customers:
+    resource: "@TuxCoffeeCornerCoreBundle/Resources/config/adminRouting/customers.yml"
+    prefix:   /admin/customers
+
+admin_products:
+    resource: "@TuxCoffeeCornerCoreBundle/Resources/config/adminRouting/products.yml"
+    prefix:   /admin/products
+
+admin_charitys:
+    resource: "@TuxCoffeeCornerCoreBundle/Resources/config/adminRouting/charitys.yml"
+    prefix:   /admin/charitys
+
+admin_mails:
+    resource: "@TuxCoffeeCornerCoreBundle/Resources/config/adminRouting/mails.yml"
+    prefix:   /admin/mails
+
+admin_vault:
+    resource: "@TuxCoffeeCornerCoreBundle/Resources/config/adminRouting/vault.yml"
+    prefix:   /admin/vault

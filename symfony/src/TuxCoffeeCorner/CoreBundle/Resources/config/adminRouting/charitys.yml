@@ -1,0 +1,47 @@
+# prefix: /admin/charitys
+
+charitys:
+  pattern: /
+  defaults: { _controller: TuxCoffeeCornerCoreBundle:Charitys:index }
+
+charitys_get:
+  pattern: /get/
+  defaults: { _controller: TuxCoffeeCornerCoreBundle:Charitys:getCharitys }
+
+charitys_getbyid:
+  pattern: /get/{pid}
+  defaults: { _controller: TuxCoffeeCornerCoreBundle:Charitys:getByID }
+
+charitys_add:
+  pattern: /add/
+  defaults: { _controller: TuxCoffeeCornerCoreBundle:Charitys:add }
+  requirements:
+    _method:  POST
+
+charitys_edit:
+  pattern: /edit/{pid}
+  defaults: { _controller: TuxCoffeeCornerCoreBundle:Charitys:edit }
+  requirements:
+    _method:  POST
+
+charitys_delete:
+  pattern: /delete/{pid}
+  defaults: { _controller: TuxCoffeeCornerCoreBundle:Charitys:delete }
+  requirements:
+    _method:  POST
+
+charitys_reset:
+  pattern: /reset/{pid}
+  defaults: { _controller: TuxCoffeeCornerCoreBundle:Charitys:reset }
+  requirements:
+    _method:  POST
+
+charitys_image_get:
+  pattern: /image/get/
+  defaults: { _controller: TuxCoffeeCornerCoreBundle:Charitys:getImages }
+
+charitys_image_add:
+  pattern: /image/add/
+  defaults: { _controller: TuxCoffeeCornerCoreBundle:Charitys:uploadImage }
+  requirements:
+    _method:  POST

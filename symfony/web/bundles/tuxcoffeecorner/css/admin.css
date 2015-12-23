@@ -1,0 +1,72 @@
+
+body {
+    background-image: url('../img/pattern.png');
+}
+
+textarea {
+    resize: vertical;
+}
+
+.content {
+    padding-top: 60px;
+	background: #ffffff;
+	box-shadow: 5px 5px 5px #888888;
+}
+
+.page-header {
+	margin-top: 0px;
+	padding-bottom: 0px;
+}
+
+.tabbable {
+	margin-bottom: 10px;
+}
+
+.tab-content {
+	padding: 10px;
+	padding-bottom: 0px;
+	border: 1px solid #dddddd;
+	border-top: none;
+}
+
+.navbar-inverse {
+	background-color: #428BCA;
+	border-color: #7ECEFD;
+}
+
+.navbar > .container .navbar-brand {
+	color: #7ECEFD;
+}
+
+.navbar > .container .navbar-brand:hover {
+	color: #FFF6E5;
+}
+
+.navbar > .container .navbar-toggle {
+	border-color: #7ECEFD;
+}
+
+.navbar > .container .navbar-toggle:hover, .navbar > .container .navbar-toggle:active, .navbar > .container .navbar-toggle:focus {
+	background-color: #7ECEFD;
+}
+
+.navbar-inverse .navbar-nav li a, .navbar-inverse .navbar-text {
+	color: #7ECEFD;
+}
+
+.navbar-inverse .navbar-nav li a:hover {
+	color: #FFF6E5;
+}
+
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
+   	background-color: #7ECEFD;
+	color: #FFF6E5; 
+}
+
+#image-hidden-input {
+    display: none;
+}
+
+#image-fake-input {
+	width: 250px;
+}

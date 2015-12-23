@@ -1,0 +1,49 @@
+# prefix: /shop
+
+shop_enter:
+    pattern:  /enter/{cid}
+    defaults: { _controller: TuxCoffeeCornerCoreBundle:Shop:enter }
+
+shop_buy:
+    pattern: /buy/{bar}
+    defaults: { _controller: TuxCoffeeCornerCoreBundle:Shop:buy }
+
+shop_donate:
+    pattern: /donate/{bar}
+    defaults: { _controller: TuxCoffeeCornerCoreBundle:Shop:donate }
+
+shop_annulate:
+    pattern: /annulate/
+    defaults: { _controller: TuxCoffeeCornerCoreBundle:Shop:annulate }
+
+shop_exit:
+    pattern: /exit/
+    defaults: { _controller: TuxCoffeeCornerCoreBundle:Shop:exit }
+
+shop_get_image:
+    pattern: /get/image/
+    defaults: { _controller: TuxCoffeeCornerCoreBundle:Shop:getImage }
+
+shop_get_ltt:
+    pattern: /get/ltt/
+    defaults: { _controller: TuxCoffeeCornerCoreBundle:Shop:getLtt }
+
+shop_product_info:
+    pattern: /product/info/{barcode}
+    defaults: { _controller: TuxCoffeeCornerCoreBundle:Shop:productInfo }
+
+shop_customer_exists:
+    pattern: /customer/exists/{cid}
+    defaults: { _controller: TuxCoffeeCornerCoreBundle:Shop:customerExists }
+
+shop_product_exists:
+    pattern: /product/exists/{barcode}
+    defaults: { _controller: TuxCoffeeCornerCoreBundle:Shop:productExists }
+
+shop_charity_exists:
+    pattern: /charity/exists/{barcode}
+    defaults: { _controller: TuxCoffeeCornerCoreBundle:Shop:charityExists }
+
+shop_error:
+    pattern: /error/
+    defaults: { _controller: TuxCoffeeCornerCoreBundle:Shop:error }

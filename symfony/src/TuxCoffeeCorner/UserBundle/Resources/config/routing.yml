@@ -1,0 +1,9 @@
+# prefix: /user
+
+user_default:
+    pattern:  /
+    defaults: { _controller: TuxCoffeeCornerUserBundle:Login:index }
+
+user_page:
+    pattern:  /page
+    defaults: { _controller: TuxCoffeeCornerUserBundle:User:index }

@@ -1,0 +1,35 @@
+# prefix: /admin/mails
+
+mails:
+  pattern: /
+  defaults: { _controller: TuxCoffeeCornerCoreBundle:Mails:index }
+
+mails_get:
+  pattern: /get/
+  defaults: { _controller: TuxCoffeeCornerCoreBundle:Mails:getMails }
+
+mails_get_byid:
+  pattern: /get/{mid}
+  defaults: { _controller: TuxCoffeeCornerCoreBundle:Mails:getByID }
+
+mails_add:
+  pattern: /add/
+  defaults: { _controller: TuxCoffeeCornerCoreBundle:Mails:add }
+  requirements:
+    _method:  POST
+
+mails_edit:
+  pattern: /edit/{mid}
+  defaults: { _controller: TuxCoffeeCornerCoreBundle:Mails:edit }
+  requirements:
+    _method:  POST
+
+mails_delete:
+  pattern: /delete/{mid}
+  defaults: { _controller: TuxCoffeeCornerCoreBundle:Mails:delete }
+  requirements:
+    _method:  POST
+
+mails_send_test:
+  pattern: /send/{mident}/{rec}
+  defaults: { _controller: TuxCoffeeCornerCoreBundle:Mails:sendTest }

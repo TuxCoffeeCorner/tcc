@@ -1,0 +1,41 @@
+# prefix: /admin/products
+
+products:
+  pattern: /
+  defaults: { _controller: TuxCoffeeCornerCoreBundle:Products:index }
+
+products_get:
+  pattern: /get/
+  defaults: { _controller: TuxCoffeeCornerCoreBundle:Products:getProducts }
+
+products_getbyid:
+  pattern: /get/{pid}
+  defaults: { _controller: TuxCoffeeCornerCoreBundle:Products:getByID }
+
+products_add:
+  pattern: /add/
+  defaults: { _controller: TuxCoffeeCornerCoreBundle:Products:add }
+  requirements:
+    _method:  POST
+
+products_edit:
+  pattern: /edit/{pid}
+  defaults: { _controller: TuxCoffeeCornerCoreBundle:Products:edit }
+  requirements:
+    _method:  POST
+
+# products_delete:
+#   pattern: /delete/{pid}
+#   defaults: { _controller: TuxCoffeeCornerCoreBundle:Products:delete }
+#   requirements:
+#     _method:  POST
+
+products_image_get:
+  pattern: /image/get/
+  defaults: { _controller: TuxCoffeeCornerCoreBundle:Products:getImages }
+
+products_image_add:
+  pattern: /image/add/
+  defaults: { _controller: TuxCoffeeCornerCoreBundle:Products:uploadImage }
+  requirements:
+    _method:  POST
